@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 
 const menuIsOpen = ref(false)
+
+const sectionOpen = ref(1)
 </script>
 
 <template>
@@ -35,24 +37,24 @@ const menuIsOpen = ref(false)
   <main>
     <!-- section*3>btn.text-xl{bouton $}+p>lorem -->
     <section>
-      <button class="text-xl">bouton 1</button>
-      <p>
+      <button @click="sectionOpen = 1" class="text-xl">bouton 1</button>
+      <p v-show="sectionOpen === 1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore animi dolore, rerum magni
         laudantium quod excepturi laboriosam, ex modi debitis harum reprehenderit eaque quam ut ea
         molestiae. Id, cum dolor!
       </p>
     </section>
     <section>
-      <button class="text-xl">bouton 2</button>
-      <p>
+      <button @click="sectionOpen = 2" class="text-xl">bouton 2</button>
+      <p v-show="sectionOpen === 2">
         Amet alias provident quos quis, minus aperiam! Officia ut ab dolores quos dolorem accusamus
         ad, consectetur unde minima, ipsum eligendi inventore id labore, laborum rerum laboriosam
         corrupti iste. Distinctio, perspiciatis!
       </p>
     </section>
     <section>
-      <button class="text-xl">bouton 3</button>
-      <p>
+      <button @click="sectionOpen = 3" class="text-xl">bouton 3</button>
+      <p v-show="sectionOpen === 3">
         Repudiandae corporis voluptates, odit reprehenderit sint pariatur at voluptatum, cumque quia
         sit eligendi ex culpa eos, alias magnam molestiae id modi accusantium ipsa eveniet
         accusamus. Tempora quis corporis et nam.
