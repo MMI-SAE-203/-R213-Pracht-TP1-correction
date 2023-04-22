@@ -1,5 +1,7 @@
 <script setup lang="ts">
-// a completer
+import { ref } from 'vue'
+
+const menuIsOpen = ref(false)
 </script>
 
 <template>
@@ -13,7 +15,7 @@
       menu
     </button>
     <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
-    <nav id="mainNav">
+    <nav id="mainNav" v-show="menuIsOpen">
       <ul>
         <li><a href="#">item 1</a></li>
         <li><a href="#">item 2</a></li>
