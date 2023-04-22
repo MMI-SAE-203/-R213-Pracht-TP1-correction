@@ -9,8 +9,9 @@ const menuIsOpen = ref(false)
     <h1 class="text-4xl">Test</h1>
     <button
       aria-controls="mainNav"
-      aria-expanded="true"
+      :aria-expanded="menuIsOpen"
       class="rounded-full border-2 border-red-600 bg-red-300 px-2"
+      @pointerdown="menuIsOpen = !menuIsOpen"
     >
       menu
     </button>
